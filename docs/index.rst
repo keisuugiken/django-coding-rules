@@ -12,6 +12,24 @@ Djangoコーディングスタイル
    :numbered:
    
    /pages/projects
+   /pages/design
+   /pages/app/admin
+   /pages/app/api_views
+   /pages/app/apps
+   /pages/app/forms
+   /pages/app/management
+   /pages/app/managers
+   /pages/app/migrations
+   /pages/app/models
+   /pages/app/scheduler
+   /pages/app/serializers
+   /pages/app/services
+   /pages/app/tests
+   /pages/app/urls
+   /pages/app/views
+   /pages/tips/email
+   /pages/tips/s3
+   /pages/tips/humanize
 
 
 

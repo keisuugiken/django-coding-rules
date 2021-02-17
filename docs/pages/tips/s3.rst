@@ -1,0 +1,32 @@
+S3
+=============
+
+AWSでDjangoアプリケーションをホスティングする場合は、static以下のフロントページはS3で配信しましょう。
+これは、フロントページのネットワーク転送をEC2から行ってネットワークがパンクすることを避けるためでもあります。
+もちろん転送費用のコスト削減にも繋がります。開発管理コストもほぼかからないのでオススメです。
+
+開発環境ではS3は使わず直接Djangoからstaticファイルを配信したいので、
+以下の設定をsettings.pyに記述します
+
+.. code-block::python
+
+    INSTALLED_APPS = [
+        ...
+
+        'storages',
+        
+        ...
+    ]
+
+    # Static files (CSS, JavaScript, Images)
+    # https://docs.djangoproject.com/en/3.0/howto/static-files/
+
+    AWS_STORAGE_BUCKET_NAME = '<project-name>' + STAGE
+
+    if STAGE == 'local':
+        STATIC_URL = '/static/'
+        STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+    else:
+        STATIC_URL = '/static/'
+        STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+        STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
