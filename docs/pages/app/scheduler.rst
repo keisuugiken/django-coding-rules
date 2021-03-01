@@ -7,7 +7,7 @@ schedulerを定義します。
 schedulerには、apschedulerを使って、どのようなタイミングで処理を実行するかを定義します。しかし、どのような処理を行うかについては、serviceクラスに記述してください。
 例えば、以下は毎日1日に支払いの請求を実行する場合のサンプルコードです。
 
-.. code-block::python
+.. code-block:: python
 
     import logging
 

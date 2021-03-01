@@ -9,7 +9,7 @@ POSTの場合はフォームを検証してエラーページを表示したり�
 
 こちらも、煩雑になった場合はロジックをserviceやformsに移すように変更しましょう。
 
-.. code-block::python
+.. code-block:: python
 
     from django.shortcuts import render, redirect
     from django.views.generic.base import View

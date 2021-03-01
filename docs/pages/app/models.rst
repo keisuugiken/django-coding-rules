@@ -4,7 +4,7 @@ models.py
 モデルはデータベースの設計をそのままDjangoの形式に転記するだけです。ここで何かロジックを考えたりプログラミングすることはありません。
 以下のようなフォーマットで記述しましょう
 
-.. code-block::python
+.. code-block:: python
 
     class Post(BaseModel, models.Model):
         post_id = models.UUIDField('投稿ID', default=uuid.uuid4, unique=True, db_index=True)

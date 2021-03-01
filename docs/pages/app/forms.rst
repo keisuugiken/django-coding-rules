@@ -1,10 +1,10 @@
-api_view.py
+forms.py
 =================
 
 
 こちらはお問い合わせフォームのサンプルです
 
-.. code-block::python
+.. code-block:: python
 
     from django import forms
     from django.conf import settings
@@ -12,24 +12,24 @@ api_view.py
     from . import models
 
 
-class ContactForm(forms.Form):
-    subject = forms.CharField(min_length=1, required=True)
-    message = forms.CharField(min_length=1, required=True)
+    class ContactForm(forms.Form):
+        subject = forms.CharField(min_length=1, required=True)
+        message = forms.CharField(min_length=1, required=True)
 
-    def __init__(self, *args, **kwargs):
-        self.context = kwargs.pop('context', {})
-        super(ContactForm, self).__init__(*args, **kwargs)
-    
-    def save(self):
-        user = self.context['request'].user
+        def __init__(self, *args, **kwargs):
+            self.context = kwargs.pop('context', {})
+            super(ContactForm, self).__init__(*args, **kwargs)
+        
+        def save(self):
+            user = self.context['request'].user
 
-        subject = self.cleaned_data['subject']
-        message = self.cleaned_data['message']
+            subject = self.cleaned_data['subject']
+            message = self.cleaned_data['message']
 
-        contact = models.Contact.objects.create(user=user,
-                                                subject=subject,
-                                                message=message)
-        return contact
+            contact = models.Contact.objects.create(user=user,
+                                                    subject=subject,
+                                                    message=message)
+            return contact
         
         
 注意すべき点は2つあります。

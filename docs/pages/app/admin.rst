@@ -6,7 +6,7 @@ models.pyにモデルを作成したら、もれなくadmin.pyに追加しまし
 例えば以下のようなPollモデルがあった場合、
 
 
-.. code-block::python
+.. code-block:: python
 
     class User(models.Model):
         username = models.CharField(max_length=100)
@@ -18,7 +18,7 @@ models.pyにモデルを作成したら、もれなくadmin.pyに追加しまし
 
 admin.pyには以下を記述します
 
-.. code-block::python
+.. code-block:: python
 
     from django.contrib import admin
 

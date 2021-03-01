@@ -10,7 +10,7 @@ import_excelのようなコマンドを作成してください。
 
 例えばシードデータをExcelからインポートするコマンドの場合は以下のように書きます
 
-.. code-block::python
+.. code-block:: python
 
     from django.core.management.base import BaseCommand
     from django.conf import settings
@@ -34,7 +34,7 @@ import_excelのようなコマンドを作成してください。
 また、ほとんどのプロジェクトでは管理者ユーザーを自動で作成したいケースが発生します。
 そこで、createsuというコマンドを定義します。
 
-.. code-block::python
+.. code-block:: python
 
     from django.core.management.base import BaseCommand
     from django.conf import settings

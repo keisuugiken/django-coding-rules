@@ -8,5 +8,3 @@ Djangoのテンプレートで、日時や通貨の数値を表示する際に�
 
 	`Djangoメモ(34) : humanizeで日時などをわかりやすく表示（naturaltime, intcomma, ordinal...） <https://wonderwall.hatenablog.com/entry/2018/04/03/001500#intcomma>`_ 
 		humanizeのメソッドを一通り紹介しているサイトです
-
-https://docs.djangoproject.com/en/3.1/ref/contrib/humanize/

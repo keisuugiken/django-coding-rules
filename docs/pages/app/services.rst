@@ -6,7 +6,7 @@ services.py
 
 以下はユーザーが新規登録されたときにメールを送信する一例です
 
-.. code-block::python
+.. code-block:: python
 
     from django.conf import settings
 

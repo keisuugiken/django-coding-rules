@@ -10,7 +10,7 @@ api_view.py
 GET /users でユーザー一覧
 POST /users でユーザーの登録を行うようなREST APIを想定しています
 
-.. code-block::python
+.. code-block:: python
 
     from django.core.paginator import Paginator
 
